@@ -1,0 +1,29 @@
+extends layout
+
+block content
+	.container
+		.col-sm-6.col-sm-offset-3
+			h1
+				.fa.fa-sign-in
+				span Login
+				
+			if(message.length > 0)
+				div.alert.alert-danger message
+			
+			form(action="/login" method="POST")
+				.form-group
+					label Email
+					input.form-control(type="text" name="email")
+				.form-group
+					label Password
+					input.form-control(type="password" name="password")
+				
+				button.btn.btn-warning.btn-lg(type="submit") Login
+				
+			hr
+			
+			p Need an Account? 
+				a(href="/signup") signup
+			p Or go to 
+				a(href="/home") home 
+				
