@@ -16,7 +16,9 @@
     "morgan": "^1.6.1",
     "passport": "^0.3.0",
     "passport-google-oauth": "^0.2.0",
-    "serve-favicon": "^2.3.0"
+    "serve-favicon": "^2.3.0",
+    "passport-misfit": "^0.1.0",
+    "request": "^2.65.0"
   },
   "devDependencies": {
     "babel-preset-es2015": "^6.0.15",
