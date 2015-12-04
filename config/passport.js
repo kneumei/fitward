@@ -33,8 +33,6 @@ module.exports = function (passport) {
 						newUser.misfit.token = token,
 						newUser.misfit.name = profile.name,
 						newUser.misfit.email = profile.email;
-						
-						newUser.goal = {points: 0, goal: 1000, rewards: 0, pointsPeriodBeginDate: new Date(), lastSyncDate: null };
 	
 						newUser.save(function (err) {
 							if (err) throw err;

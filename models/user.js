@@ -14,14 +14,18 @@ var userSchema = mongoose.Schema({
 		token: String,
 		email: String,
 		name: String,
-	}, 
+	},
 	
 	goal: {
+		name: String,
 		goal: Number,
-		points: Number,
-		rewards: Number,
-		pointsPeriodBeginDate: Date,
-		lastSyncDate: Date, 
+		goalBeginDate: Date,
+		deviceSync: {
+			lastSyncDate: Date,
+			runningTotal: Number,
+			deviceType: String,
+			deviceCurrency: String
+		} 
 	}
 	
 });

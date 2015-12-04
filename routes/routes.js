@@ -25,6 +25,26 @@ module.exports = function(app, passport) {
 			 console.log(body);   
 			}
 			
+			var user = req.user;
+			user.goal = 		{
+				name: "first goal",
+				goal: 10,
+				goalBeginDate: "2015-12-01",
+				deviceSync: {
+					lastSyncDate: null,
+					runningTotal: 0,
+					deviceType: "misfit",
+					deviceCurrency: "points"
+				}
+			};
+			
+			user.save(function(err){
+				if(err){
+					console.error(err);
+				}
+			}); 
+
+			
 			res.render('profile', {
 				user : req.user
 			});	
