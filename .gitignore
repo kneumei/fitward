@@ -4,4 +4,3 @@ app/components
 .sass-cache
 config/auth.js
 config/database.js
-bin/www
