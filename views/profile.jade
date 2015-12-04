@@ -1,5 +1,19 @@
 extends layout
 
 block content
-	div(ng-app="fitward")
-		div(fw-goal)
+	.container
+		.row
+			#goal.col-md-3
+				span Goal: #{user.goal.goal}
+				button.btn.btn-default
+					i.fa.fa-pencil-square-o
+					span edit
+			#goal-edit.col-md-3
+				div.input-group
+					input.form-control(type="text" value="#{user.goal.goal}")
+					.input-group-btn
+						button.btn Save
+			.col-md-6
+				span Points: #{user.goal.points} of #{user.goal.goal}
+			.col-md-3
+				span Rewards: #{user.goal.rewards}

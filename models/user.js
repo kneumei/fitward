@@ -14,6 +14,14 @@ var userSchema = mongoose.Schema({
 		token: String,
 		email: String,
 		name: String,
+	}, 
+	
+	goal: {
+		goal: Number,
+		points: Number,
+		rewards: Number,
+		pointsPeriodBeginDate: Date,
+		lastSyncDate: Date, 
 	}
 	
 });
